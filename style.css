@@ -42,7 +42,7 @@ a {
   text-align: center;
   margin: 10px;
   font-family: 'Serif', 'Monospace';
-  color: rgb(17, 17, 17);
+  color: #730071;
   font-size: 30px;
   padding-bottom: 5px;
   position: relative;
@@ -52,7 +52,6 @@ a {
   content: '';
   display: inline-block;
   width: 100%;
-  border-bottom: 1px solid black;
   position: absolute;
   bottom: 0;
   left: 0;
