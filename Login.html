@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <title>Bem-vindo</title>
 </head>
@@ -10,21 +10,23 @@
     <div class="container">
         <h1 class="ola">Olá!! Seja bem-vindo(a)</h1>
 
-        <h2 class="conta">Já tem uma conta?</h2>
+        <div class="login">
+            <h2 class="conta">Faça Login</h2>
 
-        <h2 class="dig">Digite seu e-mail</h2>
+            <div class="entradas">
+                <input type="email" class="btn" placeholder="Digite seu e-mail">
+            </div>
+              
+            <div class="entradas">
+                <input class="btn" type="password" placeholder="Digite sua senha">
+            </div>
+              
+            <div class="loginEnv">  
+                <a href="./Inicio.html" target="_self"><button class="btnEnviar">Login</button></a>
+            </div>
 
-        <input type="email" class="btn">
-
-        <h2 class="dig">Digite sua senha</h2>
-
-        <input class="btn" type="password">
-
-        <button class="btnEnviar"><a href="./Inicio.html" target="_self">Login</button>
-
-        <h2 class="nConta">Não tem uma conta? Vamos criar uma!</h2>
-
-        <button class="btnCadas"><a href="./Cadastro.html" target="_self">Cadastrar-se</button>
+            <h2 class="nConta">Não tem uma conta? <a href="./Cadastro.html">Vamos criar uma!</a></h2>
+        </div>
     </div>
     
 </body>
