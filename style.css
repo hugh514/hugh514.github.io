@@ -73,6 +73,12 @@ a {
   height: 40px;
 }
 
+body form .container input{
+  height: 19px;
+  width: 300px;
+  padding-top: 20px;
+}
+
 .loginEnv {
   padding-top: 50px;
   padding-bottom: 0px;
