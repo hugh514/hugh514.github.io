@@ -7,26 +7,57 @@
     <title>Bem-vindo</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="ola">Olá!! Seja bem-vindo(a)</h1>
+    <form id="form" name="form" onsubmit="return validarform()" method="post" action="file:///c%3A/Users/USUARIO/Documents/GitHub/hugh514.github.io-1/Inicio.html">
 
-        <div class="login">
-            <h2 class="conta">Faça Login</h2>
+        <div class="container">
+            <h1 class="ola">Olá!! Seja bem-vindo(a)</h1>
 
-            <div class="entradas">
-                <input type="email" class="btn" placeholder="Digite seu e-mail">
-            </div>
-              
-            <div class="entradas">
-                <input class="btn" type="password" placeholder="Digite sua senha">
-            </div>
-              
-            <div class="loginEnv">  
-                <a href="./Inicio.html" target="_self"><button class="btnEnviar">Login</button></a>
-            </div>
+            <div class="login">
+                <h2 class="conta">Faça Login</h2>
 
-            <h2 class="nConta">Não tem uma conta? <a href="./Cadastro.html">Vamos criar uma!</a></h2>
+                <div class="entradas">
+                    <input id="email" type="email" class="btn" placeholder="Digite seu e-mail">
+                </div>
+        
+                <div class="entradas">
+                    <input id="senha" class="btn" type="password" placeholder="Digite sua senha">
+                </div>
+        
+                <div class="loginEnv">
+                    <a href="./Inicio.html" target="_self"><button  onsubmit="loginEnv()" onclick="loginEnv()" class="btnEnviar">Login</button></a>
+                </div>
+                <h2 class="nConta">Não tem uma conta? <a href="./Cadastro.html">Vamos criar uma!</a></h2>
+            </div>
         </div>
-    </div>
+    </form>
+
+
+    <!-- VALIDAÇÕES -->
+
+    <script>
+        
+        function validarform(){
+
+            var email = document.forms["form"]["email"].value;
+            var senha = document.forms["form"]["senha"].value;
+
+            if(email == ""){
+                alert("Por favor preencha seu e-mail.");
+                return false;
+            }
+            else{
+                if(senha == ""){
+                    alert("Por favor preencha sua senha.");
+                    return false;
+                }
+            }
+            if(senha.length < 6){
+                alert("A senha precisa ter no mínimo 6 caracteres.");
+                return false;
+            }
+        }   
+               
+    </script>
+    
 </body>
 </html>
