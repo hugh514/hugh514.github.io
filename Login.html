@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <title>Bem-vindo</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <form id="form" name="form" onsubmit="return validarform()" method="post" action="file:///c%3A/Users/USUARIO/Documents/GitHub/hugh514.github.io-1/Inicio.html">
 
@@ -21,6 +24,7 @@
         
                 <div class="entradas">
                     <input id="senha" class="btn" type="password" placeholder="Digite sua senha">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
                 </div>
         
                 <div class="loginEnv">
@@ -55,7 +59,22 @@
                 alert("A senha precisa ter no mínimo 6 caracteres.");
                 return false;
             }
+           
         }   
+        let eye = document.querySelector(".fa-eye")
+        eye.addEventListener('click', ()=>{
+            
+            let eyeSenha = document.querySelector("#senha")
+
+            if(eyeSenha.getAttribute('type') == 'password'){
+
+                eyeSenha.setAttribute('type', 'text');
+
+            }else{
+                eyeSenha.setAttribute('type', 'password')
+            }
+        })
+       
                
     </script>
     
