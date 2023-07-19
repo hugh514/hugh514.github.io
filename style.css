@@ -133,11 +133,20 @@ body form .container input {
 .nConta a {
   color: #b9029b;
 }
+.fa-eye{
+  position: absolute;
+  top: 62%;
+  left: 60%;
+  cursor: pointer;
+  color: #730071;
+  display: flex;
+}
 
 /* Estilos do segundo código HTML */
 .dig {
   margin: 30px;
 }
+
 
 /* Estilos do terceiro código HTML */
 .apres {

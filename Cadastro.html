@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <form id="formCadas" name="formCadas" onsubmit="return validarformCadas()" method="post">
@@ -18,6 +21,7 @@
 
                 <h2>Digite sua senha</h2>
                 <input id="senhaCadas" class="btn" type="password">
+                <i class="fa fa-eye" aria-hidden="true"></i>
 
                 <h2>Digite seu nome de usuário (seja criativo)</h2>
                 <input id="usuarioCadas" class="btn" type="text">
@@ -27,6 +31,16 @@
         </div>
     </form>
 
+    <style>
+        .fa-eye{
+            position: absolute;
+            top: 58%;
+            left: 59%;
+            cursor: pointer;
+            color: #730071;
+            display: flex;
+          }
+    </style>
 
     <!-- Validação da página de cadastro -->
 
@@ -57,6 +71,20 @@
             window.location.href = "./Login.html";
             return false;
         }
+        let eye = document.querySelector(".fa-eye")
+        eye.addEventListener('click', ()=>{
+            
+            let eyeSenhaCadas = document.querySelector("#senhaCadas")
+
+            if(eyeSenhaCadas.getAttribute('type') == 'password'){
+
+                eyeSenhaCadas.setAttribute('type', 'text');
+
+            }else{
+                eyeSenhaCadas.setAttribute('type', 'password')
+            }
+            
+        })
     </script>
 
 </body>
