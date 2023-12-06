@@ -150,6 +150,36 @@ blockquote {
   width: 100%;
 }
 
+.whatsapp-icon {
+  position: fixed; /* Fixa o ícone em uma posição na tela */
+  left: 10px; /* Posiciona o ícone 10px à esquerda da tela */
+  bottom: 10px; /* Posiciona o ícone 10px abaixo da tela */
+  width: 60px; /* Define a largura do ícone */
+  height: 60px; /* Define a altura do ícone */
+  border-radius: 50%; /* Torna o ícone completamente redondo */
+  background-color: #25D366; /* Define a cor de fundo como a cor do logo do WhatsApp */
+  z-index: 1000; /* Define a ordem de empilhamento do ícone */
+  display: flex; /* Adiciona flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  cursor: pointer; /* Muda o cursor para um ponteiro quando o mouse passa por cima */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Adiciona uma transição suave para a cor de fundo e a sombra da caixa */
+}
+
+.whatsapp-icon:active {
+  background-color: #128C7E; /* Muda a cor de fundo quando o ícone é pressionado */
+  box-shadow: 0 0 10px #128C7E; /* Adiciona um "brilho" ao redor do ícone quando é pressionado */
+}
+
+.whatsapp-icon img {
+  max-width: 38px; /* Define a largura máxima */
+  max-height: 38px; /* Define a altura máxima */
+  filter: invert(1); /* Inverte as cores da imagem para torná-la branca */
+}
+
+
+
+
 
 /* Remova a propriedade text-align: center; para evitar conflitos */
 
