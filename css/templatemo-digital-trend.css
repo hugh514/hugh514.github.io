@@ -7,15 +7,15 @@ https://templatemo.com/tm-538-digital-trend
 */
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-family: 'Open-Sans';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,9 +42,9 @@ iframe {
   --link-color: #666666;
   --p-color: #444444;
 
-  --base-font-family: 'Source Sans Pro', sans-serif;
-  --title-font-family: 'Playfair Display', serif;
-  --font-bold-family: 'Source Sans Pro', sans-serif;
+  --base-font-family: 'Open-Sans', sans-serif;
+  --title-font-family: 'Poppins', serif;
+  --font-bold-family: 'Poppins', sans-serif;
   --font-weight-bold: bold;
 
   --h1-font-size: 42px;
@@ -144,12 +144,15 @@ blockquote {
 }
 
 #image-slide {
-  width: 500px;
-  /* Largura do carrossel */
-  height: 300px;
-  /* Altura do carrossel */
-  text-align: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  height: 100%;
+  max-width: 600px; /* Defina o limite máximo desejado */
+  width: 100%;
 }
+
+
+/* Remova a propriedade text-align: center; para evitar conflitos */
+
 
 /* BUTTON */
 .custom-btn {
@@ -215,8 +218,11 @@ a:focus {
 }
 
 .section-padding {
-  padding: 8em 0;
+  position: relative; /* Posiciona o elemento de forma relativa ao seu local normal */
+  padding: 8em 0; /* Adiciona um preenchimento de 8em na parte superior e inferior do elemento */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
 }
+
 
 .section-padding-half {
   padding: 4em 0;
@@ -356,8 +362,9 @@ a:focus {
 
 .hero {
   position: relative;
-  padding: 5em 0;
+  padding: 8em 0;
   overflow: hidden;
+  padding-bottom: 160px;
 }
 
 .hero-bg {
@@ -365,9 +372,9 @@ a:focus {
 }
 
 .hero-image {
-  position: relative;
-  top: 2em;
+  margin-top: 2px; /* Ajuste conforme necessário */
 }
+
 
 
 
@@ -638,74 +645,21 @@ a:focus {
      RESPONSIVE STYLES              
   -----------------------------------------*/
 
-@media screen and (min-width: 1200px) {
-
-  .about-info h2 {
-    max-width: 70%;
-  }
-}
-
-@media screen and (min-width: 991px) {
-
-  .project h2 {
-    max-width: 32%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 991px) {
-
-  .hero {
-    padding-top: 14em;
-  }
-
-  .hero-text {
-    bottom: 2em;
-  }
-
-  .navbar {
-    padding: 1em;
-  }
-
-  .navbar-collapse {
-    text-align: center;
-    padding: 2.5em 0;
-  }
-
-  .nav-link {
-    display: inline-block;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link.contact {
-    margin: 1em 0;
-  }
-
-  .copyright-text,
-  .footer-link,
-  .site-footer .social-icon {
-    margin-top: 3em;
-    padding: 0;
-    text-align: left;
-  }
-}
-
+/* Responsividade para diferentes elementos */
 @media screen and (max-width: 767px) {
-
   h1 {
-    font-size: 36px;
+    font-size: var(--h1-font-size);
   }
 
   h2 {
-    font-size: 28px;
+    font-size: var(--h2-font-size);
   }
 
   h3 {
-    font-size: 22px;
+    font-size: var(--h3-font-size);
   }
 
   .project-info {
-    right: 0;
-    left: 0;
     margin: 0 auto;
   }
 
@@ -721,4 +675,37 @@ a:focus {
   .footer-link li {
     margin-left: 0;
   }
+  
+  .hero-image {
+    padding-top: 100px;
+  }
+
+  /* Adicione uma margem inferior ao vídeo */
+  iframe {
+    margin-bottom: 20px;
+    /* Ajuste o valor conforme necessário */
+  }
+
+  .logoOzon {
+    width: 200px;
+    height: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logoOzon {
+      width: 150px;
+      height: 50px;
+    }
+
+    .navbar-toggler {
+      order: 2;
+    }
+  }
+
 }
