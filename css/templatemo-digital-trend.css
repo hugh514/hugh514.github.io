@@ -150,38 +150,106 @@ blockquote {
   width: 100%;
 }
 
-.whatsapp-icon {
-  position: fixed; /* Fixa o ícone em uma posição na tela */
-  left: 10px; /* Posiciona o ícone 10px à esquerda da tela */
-  bottom: 10px; /* Posiciona o ícone 10px abaixo da tela */
-  width: 60px; /* Define a largura do ícone */
-  height: 60px; /* Define a altura do ícone */
-  border-radius: 50%; /* Torna o ícone completamente redondo */
-  background-color: #25D366; /* Define a cor de fundo como a cor do logo do WhatsApp */
-  z-index: 1000; /* Define a ordem de empilhamento do ícone */
-  display: flex; /* Adiciona flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  cursor: pointer; /* Muda o cursor para um ponteiro quando o mouse passa por cima */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Adiciona uma transição suave para a cor de fundo e a sombra da caixa */
+.whatsapp-container {
+  position: fixed;
+  left: 10px;
+  bottom: 30px;
+  z-index: 1000;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
 }
 
-.whatsapp-icon:active {
-  background-color: #128C7E; /* Muda a cor de fundo quando o ícone é pressionado */
-  box-shadow: 0 0 10px #128C7E; /* Adiciona um "brilho" ao redor do ícone quando é pressionado */
+.whatsapp-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.whatsapp-icon:not(:hover) {
+  transition: border-radius 1.8s ease-in-out;
+}
+
+.whatsapp-expansion {
+  width: 0;
+  height: 60px;
+  background-color: #25D366;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.4s ease-in-out;
+}
+
+.whatsapp-text {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.whatsapp-person {
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px; /* Adiciona um espaçamento à direita da imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-person img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra completamente o contêiner redondo */
+}
+
+.whatsapp-container:hover .whatsapp-icon {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .whatsapp-icon img {
-  max-width: 38px; /* Define a largura máxima */
-  max-height: 38px; /* Define a altura máxima */
-  filter: invert(1); /* Inverte as cores da imagem para torná-la branca */
+  max-width: 38px;
+  max-height: 38px;
+  filter: invert(1);
 }
 
+.whatsapp-icon-inner {
+  display: flex;
+  align-items: center;
+}
 
+.whatsapp-text,
+.whatsapp-person {
+  display: none;
+  transition: opacity 1.4s, display 1.4s;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
 
+.whatsapp-person {
+  max-width: 38px;
+  max-height: 38px;
+  opacity: 0;
+}
 
+.whatsapp-container:hover .whatsapp-expansion {
+  width: 140px;
+}
 
-/* Remova a propriedade text-align: center; para evitar conflitos */
+.whatsapp-container:hover .whatsapp-text,
+.whatsapp-container:hover .whatsapp-person {
+  display: flex;
+  opacity: 1;
+}
 
 
 /* BUTTON */
@@ -386,13 +454,14 @@ a:focus {
 
 
 
+
 /*---------------------------------------
      HERO              
   -----------------------------------------*/
 
 .hero {
   position: relative;
-  padding: 8em 0;
+  padding-top: 2px;
   overflow: hidden;
   padding-bottom: 160px;
 }
