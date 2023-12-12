@@ -19,6 +19,7 @@
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -97,10 +98,9 @@
     </div>
   </section>
 
-  <!-- Seção Sobre -->
   <section class="about section-padding pb-0" id="about">
     <div class="container">
-      <div class="row">
+      <div class="column">
 
         <div class="col-lg-7 mx-auto col-md-10 col-12">
           <div class="about-info">
@@ -128,7 +128,7 @@
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-10 col-12">
+        <div class="col-lg-5 col-md-10 col-12 text-center">
           <!-- Imagem da seção Sobre -->
           <div class="about-image" data-aos="fade-up" data-aos-delay="200">
             <img src="images/office.png" class="img-fluid" alt="office">
@@ -139,8 +139,10 @@
     </div>
   </section>
 
+
+
   <!-- Seção de Projetos -->
-  <section class="project section-padding" id="project">
+  <section class="project section-padding project-bg" id="project">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-12" style="text-align: center;">
@@ -178,10 +180,6 @@
                 alt="image">
             </div>
 
-            <div class="item image-wrapper" data-aos="fade-up" data-aos-delay="100">
-              <img src="images/carrossel-ozonteck/PLANO-DE-NEOGCIOS-REFORMULADO-2023-1_page-0006.jpg" class="img-fluid"
-                alt="image">
-            </div>
           </div>
 
           <div class="owl-dots" id="image-slide-dots"></div>
@@ -204,34 +202,184 @@
       </div>
     </a>
   </div>
-<script>
-  let lastScrollTop = 0;
+  <script>
+    let lastScrollTop = 0;
 
-window.addEventListener("scroll", function() {
-  let st = window.pageYOffset || document.documentElement.scrollTop;
+    window.addEventListener("scroll", function () {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (st < lastScrollTop){
-    // Scroll down
-    document.querySelector('.whatsapp-container').classList.remove('expand');
-  } else {
-    // Scroll up
-    document.querySelector('.whatsapp-container').classList.add('expand');
-  }
+      if (st < lastScrollTop) {
+        // Scroll down
+        document.querySelector('.whatsapp-container').classList.remove('expand');
+      } else {
+        // Scroll up
+        document.querySelector('.whatsapp-container').classList.add('expand');
+      }
 
-  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-});
-</script>
- 
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    });
+  </script>
+
   </div>
+  <h2 class="titlle-product">Conheça nossos <b>Produtos</b></h2>
+  <section class="section-row">
+    <div class="container">
+      <div class="row">
+        <!-- Carousel Bem-Estar -->
+        <div class="col-md-4">
+          <div id="bem-estar" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Conteúdo do Carousel Bem-Estar -->
+              <div class="carousel-item active">
+                <div class="card">
+                  <img src="images/carrossel-produtos/GIRASSOL 2.jpg" class="card-img-top" alt="Imagem 1">
+                  <div class="card-body">
+                    <h3><b>Óleo</b><br> girassol</h3>
+                    <p class="card-text">O óleo de girassol ozonizado é um produto terapêutico que combina as
+                      propriedades germicidas do ozônio com o óleo de girassol. Ele é eficaz contra bactérias, vírus e
+                      fungos, e auxilia na regeneração e cicatrização de tecidos. Além disso, tem propriedades
+                      analgésicas, anti-inflamatórias e anti-sépticas, melhorando a oxigenação dos tecidos e
+                      fortalecendo o sistema imune.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="images/carrossel-produtos/OX3.jpg" class="card-img-top" alt="Imagem 3">
+                  <div class="card-body">
+                    <h3><b>Sabonete</b> <br>Líquido</h3>
+                    <p class="card-text">
+                      O Sabonete Líquido Ozonteck com Cannabinoid Active System oferece benefícios terapêuticos, como
+                      ação anti-inflamatória, reparação da pele, alívio do estresse e retardamento do envelhecimento.
+                      Enriquecido com vitamina C, estimula a produção de Betaendorfina, promovendo bem-estar. Indicado
+                      para aliviar irritações, melhorar cicatrização e regular inflamações cutâneas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Removendo as setas de anterior e próximo -->
+            <ol class="carousel-indicators">
+              <li data-target="#bem-estar" data-slide-to="0" class="active"></li>
+              <li data-target="#bem-estar" data-slide-to="1"></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Carousel Nutracêuticos -->
+        <div class="col-md-4">
+          <div id="nutraceuticos" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Conteúdo do Carousel Nutracêuticos -->
+              <div class="carousel-item active">
+                <div class="card">
+                  <img src="images/carrossel-produtos/CONDICIONADOR KESEN.jpg" class="card-img-top" alt="Imagem 1">
+                  <div class="card-body">
+                    <h3><b>Condicionador</b> <br> Ozon-kesen</h3>
+                    <p class="card-text">Condicionador Ozon-kesen: ideal para cabelos danificados ou quimicamente
+                      tratados. Hidrata, fortalece e reconstrói a fibra capilar, proporcionando brilho e maciez.
+                      Recomendado para todos os tipos de cabelo. Após o shampoo, aplique no comprimento e pontas, deixe
+                      agir e enxágue completamente.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="images/carrossel-produtos/SHAMPOO KESEN.jpg" class="card-img-top" alt="Imagem 3">
+                  <div class="card-body">
+                    <h3><b>Shampoo</b> <br> Ozon-kesen</h3>
+                    <p class="card-text">O Shampoo Ozon-kesen da Ozonteck é ideal para cabelos quimicamente tratados.
+                      Sua fórmula sem sal reequilibra a hidratação, proporcionando fios macios e brilhantes.
+                      Desenvolvido para restaurar a saúde capilar pós-química, limpa suavemente, repõe hidratação com
+                      vitaminas, deixando o cabelo fácil de pentear e naturalmente radiante. Indicado para todos os
+                      tipos de cabelo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Removendo as setas de anterior e próximo -->
+            <ol class="carousel-indicators">
+              <li data-target="#nutraceuticos" data-slide-to="0" class="active"></li>
+              <li data-target="#nutraceuticos" data-slide-to="1"></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Carousel Capilar Ozonizado -->
+        <div class="col-md-4">
+          <div id="capilar-ozonizado" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Conteúdo do Carousel Capilar Ozonizado -->
+              <div class="carousel-item active">
+                <div class="card">
+                  <img src="images/carrossel-produtos/DREAM.jpg" class="card-img-top" alt="Imagem 1">
+                  <div class="card-body">
+                    <h3>DreamBliss</h3>
+                    <p class="card-text">
+                      DreamBliss é um suplemento em cápsulas da Ozonteck, com melatonina e Q10 para aprimorar o sono. A
+                      melatonina regula o ciclo circadiano, enquanto o Q10 auxilia na produção de energia e tem
+                      propriedades antioxidantes. Juntos, promovem um sono profundo e reparador. Com 60 cápsulas por
+                      frasco, a recomendação é tomar uma antes de dormir. DreamBliss oferece 100% de satisfação ou
+                      reembolso. Experimente para ter sonhos mais felizes. 😴</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="images/carrossel-produtos/XBOOSTER.jpg" class="card-img-top" alt="Imagem 3">
+                  <div class="card-body">
+                    <h3>Xbooster</h3>
+                    <p class="card-text">Xbooster é um suplemento de vitaminas e minerais que contém cafeína e ajuda a
+                      melhorar a concentração, o metabolismo e a energia. É indicado para adultos maiores de 19 anos e
+                      não contém açúcares, glúten ou gorduras ruins. Cada frasco tem 60 cápsulas e deve-se tomar duas
+                      por dia. Não é um medicamento e tem restrições de uso.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Removendo as setas de anterior e próximo -->
+            <ol class="carousel-indicators">
+              <li data-target="#capilar-ozonizado" data-slide-to="0" class="active"></li>
+              <li data-target="#capilar-ozonizado" data-slide-to="1"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+    // Adicione a funcionalidade de "puxar" para o próximo item no carousel
+    $(".carousel").on("swipeleft", function () {
+      $(this).carousel("next");
+    });
+
+    // Adicione a funcionalidade de "puxar" para o item anterior no carousel
+    $(".carousel").on("swiperight", function () {
+      $(this).carousel("prev");
+    });
+  </script>
+
+  <script>
+    $('.carousel').carousel();
+  </script>
+
   <!-- Rodapé -->
-  <footer class="site-footer" style="background-color: white;">
+  <footer class="site-footer">
     <div class="container">
       <div class="row">
 
         <!-- Mensagem de rodapé -->
         <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-          <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Criamos apenas <strong>marcas</strong>
-            criativas.</h1>
+          <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Para mais dúvidas entre em contato
+            <strong>conosco</strong>
+          </h1>
         </div>
 
         <!-- Informações de contato no rodapé -->
@@ -239,14 +387,14 @@ window.addEventListener("scroll", function() {
           <h4 class="my-4">Informações de Contato</h4>
 
           <p class="mb-1">
-            <i class="fa fa-phone mr-2 footer-icon"></i>
-            +99 080 070 4224
+            <i class="fa mr-2 footer-icon"></i>
+            📞 +55 69 992736129
           </p>
 
           <p>
             <a href="#">
-              <i class="fa fa-envelope mr-2 footer-icon"></i>
-              santos.hugh514@gmail.com
+              <i class="fa mr-2 footer-icon"></i>
+              📧 santos.hugh514@gmail.com
             </a>
           </p>
         </div>

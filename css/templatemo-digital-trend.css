@@ -144,9 +144,11 @@ blockquote {
 }
 
 #image-slide {
-  margin: 0 auto; /* Centraliza horizontalmente */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
   height: 100%;
-  max-width: 600px; /* Defina o limite máximo desejado */
+  max-width: 600px;
+  /* Defina o limite máximo desejado */
   width: 100%;
 }
 
@@ -170,18 +172,21 @@ blockquote {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: border-radius 1.6s ease-in; /* Ajuste o tempo conforme necessário */
+  transition: border-radius 1.6s ease-in;
+  /* Ajuste o tempo conforme necessário */
 }
 
 .whatsapp-container.expand .whatsapp-icon {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  transition: border-radius 0.1s ease-in; /* Mantenha a mesma transição durante a expansão */
+  transition: border-radius 0.1s ease-in;
+  /* Mantenha a mesma transição durante a expansão */
 }
 
 .whatsapp-container.expand .whatsapp-expansion {
   width: 140px;
 }
+
 .whatsapp-expansion {
   width: 0;
   height: 60px;
@@ -313,9 +318,12 @@ a:focus {
 }
 
 .section-padding {
-  position: relative; /* Posiciona o elemento de forma relativa ao seu local normal */
-  padding: 8em 0; /* Adiciona um preenchimento de 8em na parte superior e inferior do elemento */
-  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+  position: relative;
+  /* Posiciona o elemento de forma relativa ao seu local normal */
+  padding: 8em 0;
+  /* Adiciona um preenchimento de 8em na parte superior e inferior do elemento */
+  overflow: hidden;
+  /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
 }
 
 
@@ -468,7 +476,8 @@ a:focus {
 }
 
 .hero-image {
-  margin-top: 2px; /* Ajuste conforme necessário */
+  margin-top: 2px;
+  /* Ajuste conforme necessário */
 }
 
 
@@ -479,7 +488,13 @@ a:focus {
   -----------------------------------------*/
 
 .project {
-  background: var(--project-bg);
+  position: relative;
+  padding-top: 20px;
+  overflow: hidden;
+  height: 1000px;
+  padding-bottom: 0;
+  background-color: var(--primary-color);
+  background: linear-gradient(-170deg, var(--primary-color) 64%, var(--white-color) 30%);
 }
 
 .project-wrapper {
@@ -591,10 +606,17 @@ a:focus {
   overflow: hidden;
 }
 
+.about-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
 .about-image img {
   display: block;
   margin: 0 auto;
 }
+
 
 
 
@@ -681,12 +703,20 @@ a:focus {
   -----------------------------------------*/
 
 .site-footer {
-  background: var(--dark-color);
+  background: var(--primary-color);
   padding: 7em 0 6em 0;
 }
 
+.site-footer p {
+  color: var(--white-color);
+}
+
 .site-footer a {
-  color: var(--p-color);
+  color: var(--white-color);
+}
+
+.site-footer h4 {
+  color: var(--white-color);
 }
 
 .site-footer a:hover,
@@ -755,6 +785,12 @@ a:focus {
     font-size: var(--h3-font-size);
   }
 
+  .project {
+    background: var(--project-bg);
+    position: relative;
+    height: 700px;
+  }
+
   .project-info {
     margin: 0 auto;
   }
@@ -771,7 +807,7 @@ a:focus {
   .footer-link li {
     margin-left: 0;
   }
-  
+
   .hero-image {
     padding-top: 100px;
   }
