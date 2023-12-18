@@ -12,9 +12,11 @@
   justify-content: center;
   align-items: center;
 }
-.card-body h3{
+
+.card-body h3 {
   padding-bottom: 10px;
 }
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -28,7 +30,8 @@
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  margin: 0 5px;}
+  margin: 0 5px;
+}
 
 .section-row {
   display: flex;
@@ -68,31 +71,100 @@
   /* Position from the right / transform: translateY(-50%); / Centers vertically */
 }
 
-.titlle-product{
+.titlle-product {
   text-align: center;
   padding: 5px;
 }
 
-.card-body p{
+.card-body p {
   font-size: 15px;
   max-height: 300px;
   overflow: auto;
 }
+
 @media (max-width: 600px) {
   .card {
-    flex: 0 1 calc(100% - 20px); /* Ocupa 100% da largura em telas pequenas */
+    flex: 0 1 calc(100% - 20px);
+    /* Ocupa 100% da largura em telas pequenas */
     width: 350px;
-    height: 700px; /* Ajusta a altura automaticamente */
+    height: 700px;
+    /* Ajusta a altura automaticamente */
   }
 
   .section-row {
-    flex-direction: column; /* Empilha os cards verticalmente em telas pequenas */
+    flex-direction: column;
+    /* Empilha os cards verticalmente em telas pequenas */
   }
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 15vh;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #004080;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.box {
+  width: 40%;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.171);
+  /* Fundo meio transparente */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 -6px -10px -10 rgba(0, 0, 0, -19);
+  /* Sombra suave */
+}
+
+.box a img {
+  filter: invert(1); /* Torna o ícone branco */
+  width: 50px; /* Define o tamanho do ícone */
+  height: 50px; /* Define o tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone com o texto */
+}
+
+
+
+
+.box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.box ul {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.box a {
+  background-color: #ffcc00;
+  color: #121314;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Quando a largura da janela de visualização for 600px ou menos, aplique os seguintes estilos */
+@media (max-width: 600px) {
+  .section {
+    flex-direction: column;
+    /* Empilha as caixas verticalmente */
+  }
+
+  .box {
+    width: 100%;
+    /* Faz com que cada caixa ocupe a largura total */
+  }
 }

@@ -221,12 +221,12 @@
   </script>
 
   </div>
-  <h2 class="titlle-product">Conheça nossos <b>Produtos</b></h2>
+  <h2 class="titlle-product" data-aos="fade-up" data-aos-delay="100">Conheça nossos <b>Produtos</b></h2>
   <section class="section-row">
     <div class="container">
       <div class="row">
         <!-- Carousel Bem-Estar -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div id="bem-estar" class="carousel slide" data-ride="carousel" data-interval="15000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Bem-Estar -->
@@ -267,7 +267,7 @@
         </div>
 
         <!-- Carousel Nutracêuticos -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div id="nutraceuticos" class="carousel slide" data-ride="carousel" data-interval="15000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Nutracêuticos -->
@@ -307,7 +307,7 @@
         </div>
 
         <!-- Carousel Capilar Ozonizado -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div id="capilar-ozonizado" class="carousel slide" data-ride="carousel" data-interval="15000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Capilar Ozonizado -->
@@ -349,9 +349,37 @@
     </div>
   </section>
   <div class="center">
-  <a href="images/CATALOGO 2023.pdf" download class="custom-btn-section btn-bg btn mt-3""
-    data-aos-delay="100">Catálogo de nossos produtos!</a></div>
+    <a href="images/CATALOGO 2023.pdf" download class="custom-btn-section btn-bg btn mt-3""
+    data-aos=" fade-up" data-aos-delay="100">Catálogo de nossos produtos!</a>
+  </div>
 
+
+  <section class="section">
+    <div class="box" data-aos="fade-up" data-aos-delay="100">
+      <h2>Distribuidor</h2>
+      <ul>
+        <li>Tópico 1</li>
+        <li>Tópico 2</li>
+        <li>Tópico 3</li>
+      </ul>
+      <a href="https://loja.grupoozonteck.com/minha-loja/Jaconiasantos" class="custom-btn-section btn-bg btn mt-3"
+        data-aos-delay="100"><img src="images/product.png" alt="Icon de distribuição"> Seja
+        Distribuidor!</a>
+    </div>
+
+    <div class="box" data-aos="fade-up" data-aos-delay="100">
+      <h2>Consumidor</h2>
+
+      <ul>
+        <li>Tópico A</li>
+        <li>Tópico B</li>
+        <li>Tópico C</li>
+      </ul>
+      <a href="https://app.grupoozonteck.com/criar-conta/Jaconiasantos" class="custom-btn-section btn-bg btn mt-3"
+        data-aos-delay="100"><img src="images/consumidor.png" alt="Icon de distribuição"> Seja
+        Consumidor!</a>
+    </div>
+  </section>
 
   <!-- Rodapé -->
   <footer class="site-footer">
@@ -360,7 +388,7 @@
 
         <!-- Mensagem de rodapé -->
         <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-          <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Para mais dúvidas entre em contato
+          <h1 data-aos="fade-up" data-aos-delay="100">Para mais dúvidas entre em contato
             <strong>conosco</strong>
           </h1>
         </div>
@@ -369,17 +397,28 @@
         <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
           <h4 class="my-4">Informações de Contato</h4>
 
-          <p class="mb-1">
-            <i class="fa mr-2 footer-icon"></i>
-            📞 +55 69 992736129
+          <style>
+            .contact-info {
+              display: flex;
+              align-items: center;
+            }
+
+            .contact-info i {
+              margin-right: 10px;
+            }
+          </style>
+
+          <p class="contact-info">
+            <i class="fa mr-2 footer-icon"></i> 📞
+            <span> +55 69 992736129</span>
           </p>
 
-          <p>
-            <a href="#">
-              <i class="fa mr-2 footer-icon"></i>
-              📧santos.hugh514@gmail.com
-            </a>
+          <p class="contact-info">
+            <i class="fa mr-2 footer-icon"></i> 📧
+            <span><a href="mailto:santos.hugh514@gmail.com"> santos.hugh514@gmail.com</a></span>
           </p>
+
+
         </div>
 
         <!-- Endereço do estúdio no rodapé -->

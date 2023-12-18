@@ -721,20 +721,24 @@ a:focus {
   -----------------------------------------*/
 
 .site-footer {
-  background: var(--primary-color);
+  background: var(--white-color);
   padding: 7em 0 6em 0;
 }
 
+.site-footer h1 {
+  color: var(--dark-color);
+}
+
 .site-footer p {
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 .site-footer a {
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 .site-footer h4 {
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 .site-footer a:hover,
