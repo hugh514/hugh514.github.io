@@ -93,3 +93,10 @@
     flex-direction: column; /* Empilha os cards verticalmente em telas pequenas */
   }
 }
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
