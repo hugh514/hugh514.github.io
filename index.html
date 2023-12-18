@@ -227,7 +227,7 @@
       <div class="row">
         <!-- Carousel Bem-Estar -->
         <div class="col-md-4">
-          <div id="bem-estar" class="carousel slide" data-ride="carousel">
+          <div id="bem-estar" class="carousel slide" data-ride="carousel" data-interval="10000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Bem-Estar -->
               <div class="carousel-item active">
@@ -268,7 +268,7 @@
 
         <!-- Carousel Nutracêuticos -->
         <div class="col-md-4">
-          <div id="nutraceuticos" class="carousel slide" data-ride="carousel">
+          <div id="nutraceuticos" class="carousel slide" data-ride="carousel" data-interval="10000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Nutracêuticos -->
               <div class="carousel-item active">
@@ -308,7 +308,7 @@
 
         <!-- Carousel Capilar Ozonizado -->
         <div class="col-md-4">
-          <div id="capilar-ozonizado" class="carousel slide" data-ride="carousel">
+          <div id="capilar-ozonizado" class="carousel slide" data-ride="carousel" data-interval="10000">
             <div class="carousel-inner">
               <!-- Conteúdo do Carousel Capilar Ozonizado -->
               <div class="carousel-item active">
@@ -352,26 +352,6 @@
   <a href="images/CATALOGO 2023.pdf" download class="custom-btn-section btn-bg btn mt-3""
     data-aos-delay="100">Catálogo de nossos produtos!</a></div>
 
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <script>
-    // Adicione a funcionalidade de "puxar" para o próximo item no carousel
-    $(".carousel").on("swipeleft", function () {
-      $(this).carousel("next");
-    });
-
-    // Adicione a funcionalidade de "puxar" para o item anterior no carousel
-    $(".carousel").on("swiperight", function () {
-      $(this).carousel("prev");
-    });
-  </script>
-
-  <script>
-    $('.carousel').carousel();
-  </script>
 
   <!-- Rodapé -->
   <footer class="site-footer">
