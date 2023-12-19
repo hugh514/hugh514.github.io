@@ -114,7 +114,6 @@
 .tipos-de-cadastro{
   background-color: #004080;
 }
-
 .box {
   width: 40%;
   border-radius: 10px;
@@ -125,6 +124,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 -6px -10px -10 rgba(0, 0, 0, -19);
   /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .box a img {
@@ -133,9 +135,6 @@
   height: 50px; /* Define o tamanho do ícone */
   vertical-align: middle; /* Alinha o ícone com o texto */
 }
-
-
-
 
 .box h2 {
   font-size: 1.5em;
@@ -157,7 +156,10 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  align-self: flex-end;
 }
+
+
 
 /* Quando a largura da janela de visualização for 600px ou menos, aplique os seguintes estilos */
 @media (max-width: 600px) {
@@ -170,4 +172,8 @@
     width: 100%;
     /* Faz com que cada caixa ocupe a largura total */
   }
+}
+
+.tipos-de-cadastro li{
+  padding-top: 10px;
 }
