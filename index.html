@@ -345,9 +345,16 @@
     </div>
   </section>
   <div class="center">
-    <a href="images/CATALOGO 2023.pdf" download class="custom-btn-section btn-bg btn mt-3""
+    <a href="images/CATALOGO 2023.pdf" download id="myButton" class="custom-btn-section btn-bg btn mt-3""
     data-aos=" fade-up" data-aos-delay="100">Catálogo de nossos produtos!</a>
   </div>
+
+  <script>
+    document.getElementById("myButton").onclick = function () {
+      this.style.display = "none"; // Esconde o botão
+      alert("O download está sendo feito, por favor aguarde."); // Mostra uma mensagem
+    }
+  </script>
 
 
   <section class="section">
